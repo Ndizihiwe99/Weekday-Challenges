@@ -14,31 +14,31 @@ public class ShoppingCart
 
     public void AddItem(decimal price)
     {
-        // if(price <= 0)
-        // {
-        //     throw new ArgumentException("Prixce must be greater than zero");
-        // }
+        if(price <= 0)
+        {
+            throw new ArgumentException("Prixce must be greater than zero");
+        }
 
-        // _prices.Add(price);
+        _prices.Add(price);
        
     }
 
     public decimal GetTotal()
     {
-        // decimal total = 0;
-        // foreach(var price in _prices)
-        // {
-        //     total += price;
-        // }
-        // return total;
+        decimal total = 0;
+        foreach(var price in _prices)
+        {
+            total += price;
+        }
+        return total;
     }
 
     public int GetItemCount()
     {
-        // if(_prices.Count == 0 || _prices == null)
-        // {
-        //     return 0;
-        // }
-        // return _prices.Count;
+        if(_prices.Count == 0 || _prices == null)
+        {
+            return 0;
+        }
+        return _prices.Count;
     }
 }
